@@ -15,9 +15,9 @@
         <h2>We are Introverts</h2>
         <ul class="list-item">
             <li class="bed">
-                <img src="https://images.unsplash.com/photo-1564019472231-4586c552dc27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="침대">
-                <p>사실 제가 지금 누워있을 시간입니다</p>
-            </li>
+            <img src="https://images.unsplash.com/photo-1564019472231-4586c552dc27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="침대">
+            <p>사실 제가 지금 누워있을 시간입니다</p>
+        </li>
             <li class="cat">
                 <img src="https://images.unsplash.com/photo-1618826411640-d6df44dd3f7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="고양이 이미지">
                 <p>지금 가야해요.<br> 집에 고양이가 기다리고있어요</p>
@@ -45,21 +45,23 @@
         </ul>
     </article>
     <script>
-        const center = document.querySelector('.list-item');
-        const items = document.querySelectorAll('.list-item li');
+        const center = document.querySelector(".list-item");
+        const items = document.querySelectorAll(".list-item li");
         const angle = 360 / items.length;
         let currAngle = 0;
 
-        document.addEventListener('click', function (event) {
-
-            if (window.innerWidth / 2 < event.clientX) {
+        document.addEventListener("click",function (event){
+            if(window.innerWidth /2 <event.clientX){
                 currAngle -= angle;
-            } else {
-                currAngle += angle;
+            } else{
+                currAngle +=angle;
             }
 
-            center.style.transform = `translate(-50%, -50%) rotateY(${currAngle}deg)`;
+            center.style.transform = `translate(-50%, -50%) rotateY(${currAngle}deg)`;   
+            
+        
         })
+
     </script>
 </body>
 
